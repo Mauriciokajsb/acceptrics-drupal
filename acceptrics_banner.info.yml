@@ -1,0 +1,6 @@
+name: Acceptrics Banner
+type: module
+description: 'Injects Acceptrics tracking code into the head element of every page on the site.'
+package: Custom
+core_version_requirement: ^9 || ^10
+version: 1.0.0

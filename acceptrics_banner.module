@@ -1,0 +1,59 @@
+<?php
+
+/**
+ * @file
+ * head injector module - Injects Acceptrics code into the head of every page.
+ *
+ * This module implements hook_page_attachments() to inject Acceptrics
+ * tracking and configuration code into the head section of both 
+ * frontend and admin pages.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ *
+ * Provides help information for the head injector module.
+ */
+function head_injector_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.head_injector':
+      return '<p>' . t('This module injects Acceptrics tracking code into the head element of every page on the site, including both front-end and admin pages.') . '</p>';
+  }
+}
+
+/**
+ * Implements hook_page_attachments().
+ *
+ * Injects Acceptrics configuration and tracking scripts into the head
+ * section of every page.
+ *
+ * @param array $attachments
+ *   An array of attachments to be processed by drupal_process_attached().
+ */
+function head_injector_page_attachments(array &$attachments) {
+  // Inject Acceptrics configuration script
+  $acceptrics_config = [
+    '#tag' => 'script',
+    '#value' => 'window.acceptrics = {}; localStorage.setItem("__acceptrics_conf", JSON.stringify({"gcmAdvanced":true,"backgroundColor":"#333","fontColor":"#ffffff","geoArea":"worldwide","accountNum":"drupal","useTranslation":false})); document.addEventListener("__acceptrics_loaded", () =>{window.acceptrics.initializeSettings();});',
+    '#attributes' => [
+      'type' => 'text/javascript',
+    ],
+  ];
+  
+  // Inject Acceptrics CDN script
+  $acceptrics_cdn = [
+    '#tag' => 'script',
+    '#attributes' => [
+      'async' => TRUE,
+      'rel' => 'dns-prefetch',
+      'src' => 'https://cdn.acceptrics.com?n=jtpsx99',
+      'type' => 'text/javascript',
+    ],
+  ];
+  
+  // Add both scripts to the head
+  $attachments['#attached']['html_head'][] = [$acceptrics_config, 'head_injector_config'];
+  $attachments['#attached']['html_head'][] = [$acceptrics_cdn, 'head_injector_cdn'];
+}

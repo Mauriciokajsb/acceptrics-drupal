@@ -1,0 +1,5 @@
+head_injector:
+  version: 1.x
+  js:
+    js/head_injector.js: { preprocess: false }
+  # Note: Acceptrics code is injected directly via PHP, not through this library

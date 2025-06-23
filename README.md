@@ -37,9 +37,9 @@ document.addEventListener("__acceptrics_loaded", () => {
 1. Download or clone this module to your Drupal site's `modules/custom/` directory
 2. Enable the module using Drush or the admin interface:
    ```bash
-   drush en head_injector
+   drush en acceptrics_banner
    ```
-   Or navigate to Admin → Extend and enable "head injector"
+   Or navigate to Admin → Extend and enable "acceptrics banner"
 
 ## Usage
 
@@ -69,13 +69,13 @@ Available configuration options:
 ## File Structure
 
 ```
-head_injector/
-├── head_injector.info.yml      # Module definition
-├── head_injector.libraries.yml # Asset library definition (placeholder)
-├── head_injector.module        # Main module file with injection logic
+acceptrics_banner/
+├── acceptrics_banner.info.yml      # Module definition
+├── acceptrics_banner.libraries.yml # Asset library definition (placeholder)
+├── acceptrics_banner.module        # Main module file with injection logic
 ├── js/
-│   └── head_injector.js        # Placeholder JavaScript file
-└── README.md                   # This documentation
+│   └── acceptrics_banner.js        # Placeholder JavaScript file
+└── README.md                       # This documentation
 ```
 
 ## Technical Details

@@ -1,6 +1,12 @@
 # Acceptrics Banner Module
 
-A custom Drupal 9/10 module that injects Acceptrics tracking code into the `<head>` element of every page on the site, including both front-end and admin pages.
+A custom Drupal 9/10 module that injects Acceptrics tracking code into the `<head>https://tagmanager.google.com/#/container/accounts/6313839744/containers/230421375/workspaces/2<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5J7FRZD8');</script>
+<!-- End Google Tag Manager -->` element of every page on the site, including both front-end and admin pages.
 
 ## Features
 
@@ -12,9 +18,15 @@ A custom Drupal 9/10 module that injects Acceptrics tracking code into the `<hea
 
 ## Acceptrics Configuration
 
-The module injects the following code into the head of every page:
+The module injects the following code into the head of every page:<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5J7FRZD8');</script>
+<!-- End Google Tag Manager -->
 
-```html
+```htmlhttps://tagmanager.google.com/#/container/accounts/6313839744/containers/230421375/workspaces/2
 <script>
 window.acceptrics = {}; 
 localStorage.setItem("__acceptrics_conf", JSON.stringify({
@@ -35,7 +47,13 @@ document.addEventListener("__acceptrics_loaded", () => {
 ## Installation
 
 1. Download or clone this module to your Drupal site's `modules/custom/` directory
-2. Enable the module using Drush or the admin interface:
+2. Enable the module using Drush or the admin interface:<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5J7FRZD8');</script>
+<!-- End Google Tag Manager -->
    ```bash
    drush en acceptrics_banner
    ```
@@ -43,8 +61,14 @@ document.addEventListener("__acceptrics_loaded", () => {
 
 ## Usage
 
-Once enabled, the module automatically injects the Acceptrics tracking code into the head of every page. No additional configuration is required.
-
+Once enabled, the module automatically injects the Acceptrics tracking code into the head of every page. No additional configuration is requiredwww.misitiowodpressnet.com.
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5J7FRZD8');</script>
+<!-- End Google Tag Manager -->
 You can verify the module is working by:
 1. Opening your browser's developer tools
 2. Refreshing any page on your site
